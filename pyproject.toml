@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hopfieldkit"
+version = "0.1.0"
+description = "Hopfield associative-memory networks in Python: Hebbian and perceptron-style (Gardner) learning, capacity theory, and known-limitation diagnostics."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Clement Marin" }]
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.23"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.5"]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://github.com/C95234/hopfieldkit"
+
+[tool.setuptools.packages.find]
+where = ["src"]
