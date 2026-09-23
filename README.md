@@ -77,6 +77,16 @@ of ~2N here — see "A documented trade-off" below for why, and treat
 these numbers as this package's own measurement, not a re-derivation of
 the published theoretical bound.
 
+**A caveat on `n_trials`, found by a later robustness check:** at the
+`n_trials=20-30` used to produce the table above, the exact pattern count
+where recovery crosses 50% moves by 1-2 depending on the random seed
+alone (checked across 5 seeds). At `n_trials=300` the curve is
+considerably smoother and the crossing point stabilises. The qualitative
+comparison (Hebb collapses first, perceptron holds on longer) is not in
+question, but the table's precise numbers should be read as
+illustrative, not as a tight measurement — a version bump with a
+higher-`n_trials` table is on the list, not done yet.
+
 ## Diagnostics for known limitations
 
 ```python
